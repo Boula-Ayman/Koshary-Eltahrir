@@ -1,7 +1,11 @@
 import type { Route } from "./+types/home";
-import Navbar from "../components/Navbar";
 import Button from "../components/Button";
 import Cover from "~/components/Cover";
+import Hero from "~/components/Hero";
+import Layout from "~/components/Layout";
+import { DISHES } from "~/utils/data";
+import { Additions } from "~/utils/data";
+import { Drinks } from "~/utils/data";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "New React Router App" },
@@ -11,9 +15,11 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <>
-      <Navbar />
+    <Layout>
       <Cover />
-    </>
+      <Hero products={DISHES} title=" Koshary" cardsPerView={3} />
+      <Hero products={Additions} title="   Additions" cardsPerView={3} />
+      <Hero products={Drinks} title="   Drinks" cardsPerView={3} />
+    </Layout>
   );
 }

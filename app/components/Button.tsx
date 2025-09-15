@@ -16,7 +16,10 @@ const Button: React.FC<ButtonProps> = ({ children }) => {
       onClick={handleClick}
       className={`${
         isClicked ? "bg-[#8dc88c]" : "bg-white"
-      } border-2 border-[#8dc88c] hover:bg-[#8dc88c] text-gray-600 font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 capitalize`}
+      } border-2 border-[#8dc88c]
+        hover:bg-[#8dc88c] text-gray-600 font-semibold 
+        py-3 px-18 rounded-2xl shadow-md transition duration-300 
+        ease-in-out transform hover:scale-105 capitalize`}
     >
       {children}
     </button>
