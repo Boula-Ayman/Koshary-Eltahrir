@@ -4,6 +4,7 @@ import Button from "../components/Button";
 import { useCart } from "../context/CartContext";
 import { DISHES, Additions, Drinks } from "~/utils/data";
 import Layout from "../components/Layout";
+import { motion } from "framer-motion";
 
 const Menu: React.FC = () => {
   const {
@@ -26,7 +27,13 @@ const Menu: React.FC = () => {
       <section className="py-8">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-8 text-center">Our Menu</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+          >
             {allProducts.map((dish) => (
               <div key={dish.id} className="bg-white rounded-lg p-4 shadow-lg">
                 <img
@@ -75,7 +82,7 @@ const Menu: React.FC = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
     </Layout>

@@ -70,7 +70,7 @@ const Hero: React.FC<HeroProps> = ({
     <section className="relative bg-center h-[80vh] flex flex-col justify-center py-8">
       <div className="absolute inset-0 bg-black bg-opacity-60"></div>
       <div className="relative z-10 text-center text-white px-4">
-        <h2 className="text-4xl font-bold mx-12">{title}</h2>
+        <h2 className="text-4xl font-bold pb-8 text-start">{title}</h2>
         <div className="relative overflow-hidden w-full">
           <div
             className="flex transition-transform duration-500 ease-in-out"
@@ -88,7 +88,7 @@ const Hero: React.FC<HeroProps> = ({
                   <img
                     src={dish.img}
                     alt={dish.name}
-                    className="w-full h-66 object-cover rounded-md mb-4"
+                    className="w-full h-80 object-cover rounded-md mb-4"
                   />
                   <h3 className="text-lg font-semibold mb-2">{dish.name}</h3>
                   <div className="flex justify-between items-center mb-4">

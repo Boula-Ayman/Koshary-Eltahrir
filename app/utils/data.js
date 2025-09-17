@@ -50,7 +50,7 @@ export const DISHES = [
 ];
 export const Additions = [
   {
-    id: 1,
+    id: 7,
     name: "Fried Onion",
     desc: " ",
     price: 10,
@@ -58,7 +58,7 @@ export const Additions = [
     img: "/images/1.jpg",
   },
   {
-    id: 2,
+    id: 8,
     name: "Garlic Sauce ",
     desc: "",
     price: 12,
@@ -66,7 +66,7 @@ export const Additions = [
     img: "/images/2.jpg",
   },
   {
-    id: 3,
+    id: 9,
     name: "Hot sause ",
     desc: "     ",
     price: 15,
@@ -74,7 +74,7 @@ export const Additions = [
     img: "/images/3.jpg",
   },
   {
-    id: 4,
+    id: 10,
     name: " Tomato Sauce",
     desc: "",
     price: 20,
@@ -82,7 +82,7 @@ export const Additions = [
     img: "/images/3-1.jpg",
   },
   {
-    id: 5,
+    id: 11,
     name: "Chickpeas",
     desc: "",
     price: 20,
@@ -90,7 +90,7 @@ export const Additions = [
     img: "/images/4.jpg",
   },
   {
-    id: 6,
+    id: 12,
     name: "Lentils ",
     desc: "",
     price: 25,
@@ -100,7 +100,7 @@ export const Additions = [
 ];
 export const Drinks = [
   {
-    id: 1,
+    id: 13,
     name: "Miranda Apple",
     desc: " ",
     price: 20,
@@ -108,7 +108,7 @@ export const Drinks = [
     img: "/images/5.jpg",
   },
   {
-    id: 2,
+    id: 14,
     name: "Mirinda Orange ",
     desc: "",
     price: 120,
@@ -116,7 +116,7 @@ export const Drinks = [
     img: "/images/6.jpg",
   },
   {
-    id: 3,
+    id: 15,
     name: "7 UP Diet",
     desc: "     ",
     price: 20,
@@ -124,7 +124,7 @@ export const Drinks = [
     img: "/images/7.jpg",
   },
   {
-    id: 4,
+    id: 16,
     name: " Pepsi Diet",
     desc: "",
     price: 20,
@@ -132,7 +132,7 @@ export const Drinks = [
     img: "/images/10.jpg",
   },
   {
-    id: 5,
+    id: 17,
     name: "Pepsi",
     desc: "",
     price: 20,
@@ -140,11 +140,54 @@ export const Drinks = [
     img: "/images/11.jpg",
   },
   {
-    id: 6,
+    id: 18,
     name: "Mineral Water ",
     desc: "",
     price: 10,
     category: "main",
     img: "/images/9.jpg",
+  },
+];
+
+export const Desserts = [
+  {
+    id: 19,
+    name: "Om-Ali-Dessert",
+    desc: " ",
+    price: 25,
+    category: "main",
+    img: "/images/Om-Ali-Dessert.jpg",
+  },
+  {
+    id: 20,
+    name: "Om Ali",
+    desc: " ",
+    price: 25,
+    category: "main",
+    img: "/images/omALi.jpg",
+  },
+  {
+    id: 21,
+    name: "Om Ali",
+    desc: " ",
+    price: 25,
+    category: "main",
+    img: "/images/Desserts3.webp",
+  },
+  {
+    id: 22,
+    name: "Rice Pudding ",
+    desc: " ",
+    price: 25,
+    category: "main",
+    img: "/images/desert2.jpg",
+  },
+  {
+    id: 23,
+    name: "Pudding ",
+    desc: " ",
+    price: 25,
+    category: "main",
+    img: "/images/desert2.jpg",
   },
 ];
