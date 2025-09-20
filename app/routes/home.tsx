@@ -11,8 +11,12 @@ import { motion } from "framer-motion";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "كشري التحرير - أشهى الكشري المصري" },
+    {
+      name: "description",
+      content:
+        "مطعم كشري التحرير - أشهى الكشري المصري الأصيل مع أفضل المكونات الطازجة",
+    },
   ];
 }
 
@@ -37,10 +41,10 @@ export default function Home() {
         transition={pageTransition}
       >
         <Cover />
-        <Hero products={DISHES} title=" Koshary" cardsPerView={3} />
-        <Hero products={Additions} title="   Additions" cardsPerView={3} />
-        <Hero products={Drinks} title="   Drinks" cardsPerView={3} />
-        <Hero products={Desserts} title="   Desserts" cardsPerView={3} />
+        <Hero products={DISHES} title=" الكشري" cardsPerView={3} />
+        <Hero products={Additions} title="   الإضافات" cardsPerView={3} />
+        <Hero products={Drinks} title="   المشروبات" cardsPerView={3} />
+        <Hero products={Desserts} title="   الحلويات" cardsPerView={3} />
       </motion.div>
     </Layout>
   );

@@ -27,11 +27,11 @@ const Hero: React.FC<HeroProps> = ({
   const [cardsPerView, setCardsPerView] = useState(propCardsPerView);
   const {
     cartlist,
-    favorites,
+    // favorites,
     addToCartlist,
     removeFromCartlist,
-    addToFavorites,
-    removeFromFavorites,
+    // addToFavorites,
+    // removeFromFavorites,
   } = useCart();
 
   useEffect(() => {
@@ -63,8 +63,8 @@ const Hero: React.FC<HeroProps> = ({
   };
 
   const isInCartlist = (id: number) => cartlist.some((item) => item.id === id);
-  const isInFavorites = (id: number) =>
-    favorites.some((item) => item.id === id);
+  // const isInFavorites = (id: number) =>
+  //   favorites.some((item) => item.id === id);
 
   return (
     <section className="relative bg-center h-[80vh] flex flex-col justify-center py-8">
@@ -89,11 +89,27 @@ const Hero: React.FC<HeroProps> = ({
                     src={dish.img}
                     alt={dish.name}
                     className="w-full h-80 object-cover rounded-md mb-4"
+                    loading="lazy"
                   />
-                  <h3 className="text-lg font-semibold mb-2">{dish.name}</h3>
+                  <h3 className="text-lg font-semibold mb-2 text-gray-800 ">
+                    {dish.name}
+                  </h3>
+                  <p className="text-sm mb-4">{dish.desc}</p>
                   <div className="flex justify-between items-center mb-4">
-                    <Button>{dish.price}</Button>
-                    <div className="flex space-x-2">
+                    <Button
+                      dish={dish}
+                      isInCart={isInCartlist(dish.id)}
+                      onCartToggle={(dishItem) => {
+                        if (isInCartlist(dish.id)) {
+                          removeFromCartlist(dish.id);
+                        } else {
+                          addToCartlist(dish);
+                        }
+                      }}
+                    >
+                      {dish.price}
+                    </Button>
+                    {/* <div className="flex space-x-2">
                       <button
                         onClick={() => {
                           if (isInCartlist(dish.id)) {
@@ -103,6 +119,11 @@ const Hero: React.FC<HeroProps> = ({
                           }
                         }}
                         className={`p-2 rounded-full ${isInCartlist(dish.id) ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-600"}`}
+                        aria-label={
+                          isInCartlist(dish.id)
+                            ? `إزالة ${dish.name} من السلة`
+                            : `إضافة ${dish.name} إلى السلة`
+                        }
                       >
                         <ShoppingCart size={16} />
                       </button>
@@ -115,10 +136,15 @@ const Hero: React.FC<HeroProps> = ({
                           }
                         }}
                         className={`p-2 rounded-full ${isInFavorites(dish.id) ? "bg-red-500 text-white" : "bg-gray-200 text-gray-600"}`}
+                        aria-label={
+                          isInFavorites(dish.id)
+                            ? `إزالة ${dish.name} من المفضلة`
+                            : `إضافة ${dish.name} إلى المفضلة`
+                        }
                       >
                         <Heart size={16} />
                       </button>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -128,7 +154,7 @@ const Hero: React.FC<HeroProps> = ({
             onClick={prevSlide}
             disabled={currentIndex === 0}
             className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-[#8dc88c] bg-opacity-70 hover:bg-opacity-90 transition disabled:opacity-50"
-            aria-label="Previous"
+            aria-label="السابق"
           >
             <ChevronLeft size={24} />
           </button>
@@ -136,7 +162,7 @@ const Hero: React.FC<HeroProps> = ({
             onClick={nextSlide}
             disabled={currentIndex === maxIndex}
             className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-[#8dc88c] bg-opacity-70 hover:bg-opacity-90 transition disabled:opacity-50"
-            aria-label="Next"
+            aria-label="التالي"
           >
             <ChevronRight size={24} />
           </button>

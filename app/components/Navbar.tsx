@@ -10,9 +10,12 @@ import {
   Phone,
   X,
 } from "lucide-react";
+import { useCart } from "../context/CartContext";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { cartlist } = useCart();
+
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,35 +35,40 @@ const Navbar: React.FC = () => {
               to="/"
               className="hover:text-[#8dc88c] text-gray-700 font-bold"
             >
-              Home
+              الرئيسية
             </Link>
             <Link
               to="/menu"
               className="hover:text-[#8dc88c]  text-gray-700 font-bold"
             >
-              Menu
+              القائمة
             </Link>
             <Link
               to="/about"
               className="hover:text-[#8dc88c]  text-gray-700 font-bold"
             >
-              About
+              عن المتجر
             </Link>
             <Link
               to="/contact"
               className="hover:text-[#8dc88c]  text-gray-700 font-bold"
             >
-              Contact
+              تواصل معنا
             </Link>
           </div>
           {/* Icons */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 relative">
             {/* <Heart className="text-gray-700 hover:text-[#8dc88c] cursor-pointer" /> */}
             <Link
               to="/cart"
-              className="text-gray-700 hover:text-[#8dc88c] cursor-pointer"
+              className="text-gray-700 hover:text-[#8dc88c] cursor-pointer relative"
             >
               <ShoppingCart size={24} />
+              {cartlist.length > 0 && (
+                <span className="absolute -top-2 -right-2 bg-red-600 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">
+                  {cartlist.length}
+                </span>
+              )}
             </Link>
             {/* Mobile Toggle */}
             <div className="md:hidden text-gray-700 hover:text-[#8dc88c] cursor-pointer">
@@ -90,7 +98,7 @@ const Navbar: React.FC = () => {
               onClick={() => setIsOpen(false)}
             >
               <Home size={20} />
-              <span>Home</span>
+              <span>الرئيسية</span>
             </Link>
             <Link
               to="/menu"
@@ -98,7 +106,7 @@ const Navbar: React.FC = () => {
               onClick={() => setIsOpen(false)}
             >
               <Utensils size={20} />
-              <span>Menu</span>
+              <span>القائمة</span>
             </Link>
             <Link
               to="/about"
@@ -106,7 +114,7 @@ const Navbar: React.FC = () => {
               onClick={() => setIsOpen(false)}
             >
               <Info size={20} />
-              <span>About</span>
+              <span>عن المتجر</span>
             </Link>
             <Link
               to="/contact"
@@ -114,7 +122,7 @@ const Navbar: React.FC = () => {
               onClick={() => setIsOpen(false)}
             >
               <Phone size={20} />
-              <span>Contact</span>
+              <span>تواصل معنا</span>
             </Link>
           </div>
         )}

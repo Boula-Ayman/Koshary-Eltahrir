@@ -6,8 +6,7 @@ import { ArrowLeft } from "lucide-react";
 import Layout from "../components/Layout";
 
 const Cart: React.FC = () => {
-  const { cartlist, favorites, removeFromCartlist, removeFromFavorites } =
-    useCart();
+  const { cartlist, favorites, removeFromCartlist } = useCart();
 
   return (
     <Layout>
@@ -19,12 +18,12 @@ const Cart: React.FC = () => {
         >
           <ArrowLeft size={24} />
         </Link>
-        <h1 className="text-3xl font-bold mb-8">Cartlist & Favorites</h1>
+        <h1 className="text-3xl font-bold mb-8">السلة</h1>
 
         <div className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Cartlist</h2>
+          <h2 className="text-2xl font-semibold mb-4">السلة</h2>
           {cartlist.length === 0 ? (
-            <p>No items in cartlist.</p>
+            <p>لا توجد عناصر في السلة.</p>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {cartlist.map((dish) => (
@@ -45,7 +44,7 @@ const Cart: React.FC = () => {
                       onClick={() => removeFromCartlist(dish.id)}
                       className="bg-red-500 text-white px-4 py-2 rounded"
                     >
-                      Remove
+                      إزالة
                     </button>
                   </div>
                 </div>
@@ -54,10 +53,10 @@ const Cart: React.FC = () => {
           )}
         </div>
 
-        <div>
-          <h2 className="text-2xl font-semibold mb-4">Favorites</h2>
+        {/* <div>
+          <h2 className="text-2xl font-semibold mb-4">المفضلة</h2>
           {favorites.length === 0 ? (
-            <p>No items in favorites.</p>
+            <p>لا توجد عناصر في المفضلة.</p>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {favorites.map((dish) => (
@@ -78,14 +77,14 @@ const Cart: React.FC = () => {
                       onClick={() => removeFromFavorites(dish.id)}
                       className="bg-red-500 text-white px-4 py-2 rounded"
                     >
-                      Remove
+                      إزالة
                     </button>
                   </div>
                 </div>
               ))}
             </div>
           )}
-        </div>
+        </div> */}
       </div>
     </Layout>
   );

@@ -11,4 +11,5 @@ declare module "~/utils/data" {
   export const DISHES: Dish[];
   export const Additions: Dish[];
   export const Drinks: Dish[];
+  export const Desserts: Dish[];
 }

@@ -5,7 +5,7 @@ const Cover: React.FC = () => {
     <div className="h-100 flex justify-center items-center bg-cover bg-center">
       <img
         src="/images/cover.png"
-        alt="cover"
+        alt="غلاف المطعم"
         className="w-full h-full object-cover"
       />
     </div>

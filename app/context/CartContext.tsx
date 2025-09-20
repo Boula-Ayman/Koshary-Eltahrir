@@ -33,6 +33,8 @@ interface CartProviderProps {
   children: ReactNode;
 }
 
+export { CartContext };
+
 export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   const [cartlist, setCartlist] = useState<Dish[]>([]);
   const [favorites, setFavorites] = useState<Dish[]>([]);

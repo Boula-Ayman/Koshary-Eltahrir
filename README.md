@@ -1,61 +1,61 @@
-# Welcome to React Router!
+# مرحباً بك في React Router!
 
-A modern, production-ready template for building full-stack React applications using React Router.
+قالب حديث وجاهز للإنتاج لبناء تطبيقات React كاملة المكدس باستخدام React Router.
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
 
-## Features
+## المميزات
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- 🚀 التقديم من جانب الخادم
+- ⚡️ استبدال الوحدات الساخنة (HMR)
+- 📦 تجميع وتحسين الأصول
+- 🔄 تحميل البيانات والطفرات
+- 🔒 TypeScript بشكل افتراضي
+- 🎉 TailwindCSS للتصميم
+- 📖 [وثائق React Router](https://reactrouter.com/)
 
-## Getting Started
+## البدء
 
-### Installation
+### التثبيت
 
-Install the dependencies:
+قم بتثبيت التبعيات:
 
 ```bash
 npm install
 ```
 
-### Development
+### التطوير
 
-Start the development server with HMR:
+ابدأ خادم التطوير مع HMR:
 
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+سيكون تطبيقك متاحاً على `http://localhost:5173`.
 
-## Building for Production
+## البناء للإنتاج
 
-Create a production build:
+أنشئ نسخة الإنتاج:
 
 ```bash
 npm run build
 ```
 
-## Deployment
+## النشر
 
-### Docker Deployment
+### النشر باستخدام Docker
 
-To build and run using Docker:
+لبناء وتشغيل باستخدام Docker:
 
 ```bash
 docker build -t my-app .
 
-# Run the container
+# تشغيل الحاوية
 docker run -p 3000:3000 my-app
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+يمكن نشر التطبيق المحاوي على أي منصة تدعم Docker، بما في ذلك:
 
 - AWS ECS
 - Google Cloud Run
@@ -64,24 +64,24 @@ The containerized application can be deployed to any platform that supports Dock
 - Fly.io
 - Railway
 
-### DIY Deployment
+### النشر اليدوي
 
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
+إذا كنت معتاداً على نشر تطبيقات Node، فإن خادم التطبيق المدمج جاهز للإنتاج.
 
-Make sure to deploy the output of `npm run build`
+تأكد من نشر مخرجات `npm run build`
 
 ```
 ├── package.json
 ├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
 ├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+│   ├── client/    # الأصول الثابتة
+│   └── server/    # كود جانب الخادم
 ```
 
-## Styling
+## التصميم
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+يأتي هذا القالب مع [Tailwind CSS](https://tailwindcss.com/) مُعد مسبقاً لتجربة بداية بسيطة. يمكنك استخدام أي إطار عمل CSS تفضله.
 
 ---
 
-Built with ❤️ using React Router.
+مبني بـ ❤️ باستخدام React Router.

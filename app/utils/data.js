@@ -1,48 +1,48 @@
 export const DISHES = [
   {
     id: 1,
-    name: "Tahrir Koshary",
-    desc: " ",
+    name: "كشري التحرير",
+    desc: "طبق مصري كلاسيكي من الأرز والعدس والمكرونة والحمص مغطى بصلصة الطماطم الحارة والبصل المقلي المقرمش.",
     price: 35,
     category: "main",
     img: "/images/a.jpg",
   },
   {
     id: 2,
-    name: "Top Tahrir Koshary",
-    desc: "",
+    name: "كشري التحرير المميز",
+    desc: "النسخة المميزة من كشري التحرير الخاص بنا مع حصص إضافية من العدس وطبقة سخية من البصل المكرمل.",
     price: 40,
     category: "main",
     img: "/images/b.jpg",
   },
   {
     id: 3,
-    name: "Large Tahrir Koshary",
-    desc: "     ",
+    name: "كشري التحرير الكبير",
+    desc: "حصتنا الكبيرة من الكشري التقليدي، مثالية للمشاركة أو عندما تكون جائعاً جداً.",
     price: 50,
     category: "main",
     img: "/images/c.jpg",
   },
   {
     id: 4,
-    name: " King Tahrir Koshary",
-    desc: "",
+    name: "كشري التحرير الملكي",
+    desc: "تجربة الكشري النهائية مع حصص مزدوجة وإضافات مميزة للذواقة الحقيقي.",
     price: 55,
     category: "main",
     img: "/images/d.jpg",
   },
   {
     id: 5,
-    name: "Family Tahrir Koshary",
-    desc: "",
+    name: "كشري التحرير العائلي",
+    desc: "حصة كبيرة بحجم العائلة من كشري التحرير الأصيل، مثالية للتجمعات العائلية.",
     price: 60,
     category: "main",
     img: "/images/family.jpg",
   },
   {
     id: 6,
-    name: "Mega Tahrir ",
-    desc: "",
+    name: "كشري التحرير العملاق",
+    desc: "أكبر حصة لدينا من الكشري، محملة بجميع المكونات التقليدية لأقصى درجات الرضا.",
     price: 70,
     category: "main",
     img: "/images/family2.jpg",
@@ -51,7 +51,7 @@ export const DISHES = [
 export const Additions = [
   {
     id: 7,
-    name: "Fried Onion",
+    name: "بصل مقلي",
     desc: " ",
     price: 10,
     category: "main",
@@ -59,7 +59,7 @@ export const Additions = [
   },
   {
     id: 8,
-    name: "Garlic Sauce ",
+    name: "صلصة الثوم",
     desc: "",
     price: 12,
     category: "main",
@@ -67,7 +67,7 @@ export const Additions = [
   },
   {
     id: 9,
-    name: "Hot sause ",
+    name: "صلصة حارة",
     desc: "     ",
     price: 15,
     category: "main",
@@ -75,7 +75,7 @@ export const Additions = [
   },
   {
     id: 10,
-    name: " Tomato Sauce",
+    name: "صلصة الطماطم",
     desc: "",
     price: 20,
     category: "main",
@@ -83,7 +83,7 @@ export const Additions = [
   },
   {
     id: 11,
-    name: "Chickpeas",
+    name: "حمص",
     desc: "",
     price: 20,
     category: "main",
@@ -91,7 +91,7 @@ export const Additions = [
   },
   {
     id: 12,
-    name: "Lentils ",
+    name: "عدس",
     desc: "",
     price: 25,
     category: "main",
@@ -101,7 +101,7 @@ export const Additions = [
 export const Drinks = [
   {
     id: 13,
-    name: "Miranda Apple",
+    name: "ميراندا تفاح",
     desc: " ",
     price: 20,
     category: "main",
@@ -109,7 +109,7 @@ export const Drinks = [
   },
   {
     id: 14,
-    name: "Mirinda Orange ",
+    name: "ميراندا برتقال",
     desc: "",
     price: 120,
     category: "main",
@@ -117,7 +117,7 @@ export const Drinks = [
   },
   {
     id: 15,
-    name: "7 UP Diet",
+    name: "7 أب دايت",
     desc: "     ",
     price: 20,
     category: "main",
@@ -125,7 +125,7 @@ export const Drinks = [
   },
   {
     id: 16,
-    name: " Pepsi Diet",
+    name: "بيبسي دايت",
     desc: "",
     price: 20,
     category: "main",
@@ -133,7 +133,7 @@ export const Drinks = [
   },
   {
     id: 17,
-    name: "Pepsi",
+    name: "بيبسي",
     desc: "",
     price: 20,
     category: "main",
@@ -141,7 +141,7 @@ export const Drinks = [
   },
   {
     id: 18,
-    name: "Mineral Water ",
+    name: "ماء معدني",
     desc: "",
     price: 10,
     category: "main",
@@ -152,7 +152,7 @@ export const Drinks = [
 export const Desserts = [
   {
     id: 19,
-    name: "Om-Ali-Dessert",
+    name: "  أم علي ساده",
     desc: " ",
     price: 25,
     category: "main",
@@ -160,7 +160,7 @@ export const Desserts = [
   },
   {
     id: 20,
-    name: "Om Ali",
+    name: "أم علي مكسرات",
     desc: " ",
     price: 25,
     category: "main",
@@ -168,7 +168,7 @@ export const Desserts = [
   },
   {
     id: 21,
-    name: "Om Ali",
+    name: " أم علي بالشوكولاتة",
     desc: " ",
     price: 25,
     category: "main",
@@ -176,7 +176,7 @@ export const Desserts = [
   },
   {
     id: 22,
-    name: "Rice Pudding ",
+    name: "أرز باللبن",
     desc: " ",
     price: 25,
     category: "main",
@@ -184,7 +184,7 @@ export const Desserts = [
   },
   {
     id: 23,
-    name: "Pudding ",
+    name: "بودينج",
     desc: " ",
     price: 25,
     category: "main",

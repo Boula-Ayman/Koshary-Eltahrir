@@ -26,7 +26,7 @@ const Menu: React.FC = () => {
     <Layout>
       <section className="py-8">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-8 text-center">Our Menu</h2>
+          <h2 className="text-4xl font-bold mb-8 text-center">قائمتنا</h2>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -41,11 +41,25 @@ const Menu: React.FC = () => {
                   alt={dish.name}
                   className="w-full h-48 object-cover rounded-md mb-4"
                 />
-                <h3 className="text-lg font-semibold mb-2">{dish.name}</h3>
+                <h3 className="text-lg font-semibold mb-2 text-gray-800 text-center">
+                  {dish.name}
+                </h3>
                 <p className="text-gray-600 mb-4">{dish.desc}</p>
                 <div className="flex justify-between items-center">
-                  <Button>{dish.price}</Button>
-                  <div className="flex space-x-2">
+                  <Button
+                    dish={dish}
+                    isInCart={isInCartlist(dish.id)}
+                    onCartToggle={(dishItem) => {
+                      if (isInCartlist(dishItem.id)) {
+                        removeFromCartlist(dishItem.id);
+                      } else {
+                        addToCartlist(dishItem);
+                      }
+                    }}
+                  >
+                    {dish.price}
+                  </Button>
+                  {/* <div className="flex space-x-2">
                     <button
                       onClick={() => {
                         if (isInCartlist(dish.id)) {
@@ -78,7 +92,7 @@ const Menu: React.FC = () => {
                     >
                       <Heart size={16} />
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}
