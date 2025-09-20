@@ -39,7 +39,7 @@ const Menu: React.FC = () => {
                 <img
                   src={dish.img}
                   alt={dish.name}
-                  className="w-full h-48 object-cover rounded-md mb-4"
+                  className="w-full h-66 object-cover rounded-md mb-4"
                 />
                 <h3 className="text-lg font-semibold mb-2 text-gray-800 text-center">
                   {dish.name}

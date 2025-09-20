@@ -21,7 +21,6 @@ const Cart: React.FC = () => {
         <h1 className="text-3xl font-bold mb-8">السلة</h1>
 
         <div className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">السلة</h2>
           {cartlist.length === 0 ? (
             <p>لا توجد عناصر في السلة.</p>
           ) : (
@@ -34,7 +33,7 @@ const Cart: React.FC = () => {
                   <img
                     src={dish.img}
                     alt={dish.name}
-                    className="w-full h-48 object-cover rounded-md mb-4"
+                    className="w-full h-66 object-cover rounded-md mb-4"
                   />
                   <h3 className="text-lg font-semibold mb-2">{dish.name}</h3>
                   <p className="text-gray-600 mb-4">{dish.desc}</p>
