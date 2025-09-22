@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
           {/* Logo Section */}
           <Link to="/">
             <img
-              src="../../public/images/logo.jpg"
+              src="/images/logo.jpg"
               alt="Logo"
               className="h-12 w-auto rounded-full "
             />
