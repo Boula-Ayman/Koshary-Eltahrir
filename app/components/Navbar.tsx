@@ -11,6 +11,7 @@ import {
   X,
 } from "lucide-react";
 import { useCart } from "../context/CartContext";
+import myNewLogo from "/public/images/my-new-logo.jpg";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +24,7 @@ const Navbar: React.FC = () => {
           {/* Logo Section */}
           <Link to="/">
             <img
-              src="/images/logo.jpg"
+              src={myNewLogo}
               alt="Logo"
               className="h-12 w-auto rounded-full "
             />
