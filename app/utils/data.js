@@ -111,7 +111,7 @@ export const Drinks = [
     id: 14,
     name: "ميراندا برتقال",
     desc: "",
-    price: 120,
+    price: 20,
     category: "main",
     img: "/images/6.jpg",
   },
@@ -168,7 +168,7 @@ export const Desserts = [
   },
   {
     id: 21,
-    name: " أم علي بالشوكولاتة",
+    name: " أم علي بالبندق ",
     desc: " ",
     price: 25,
     category: "main",

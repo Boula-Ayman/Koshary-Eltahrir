@@ -44,7 +44,7 @@ const Menu: React.FC = () => {
                 <h3 className="text-lg font-semibold mb-2 text-gray-800 text-center">
                   {dish.name}
                 </h3>
-                <p className="text-gray-600 mb-4">{dish.desc}</p>
+                <p className="text-gray-600 mb-4 text-center">{dish.desc}</p>
                 <div className="flex justify-between items-center">
                   <Button
                     dish={dish}
