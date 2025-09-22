@@ -15,7 +15,7 @@ const Contact = () => {
             <p className="text-gray-700 leading-relaxed">
               📍 العنوان: ميدان التحرير، القاهرة، مصر
             </p>
-            <p className="text-gray-700">📞 الهاتف: 0100 123 4567</p>
+            <p className="text-gray-700">📞 الهاتف: 0100 123 4577</p>
             <p className="text-gray-700">📧 البريد: info@tahrirkoshary.com</p>
 
             <form className="space-y-4 bg-gray-50 p-6 rounded-xl shadow-md">
