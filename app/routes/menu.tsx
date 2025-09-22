@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Heart, ShoppingCart } from "lucide-react";
 import Button from "../components/Button";
 import { useCart } from "../context/CartContext";
-import { DISHES, Additions, Drinks } from "~/utils/data";
+import { AllProducts } from "~/utils/data";
 import Layout from "../components/Layout";
 import { motion } from "framer-motion";
 
@@ -16,7 +16,13 @@ const Menu: React.FC = () => {
     removeFromFavorites,
   } = useCart();
 
-  const allProducts = [...DISHES, ...Additions, ...Drinks];
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredProducts = AllProducts.filter(
+    (dish) =>
+      dish.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      dish.desc.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   const isInCartlist = (id: number) => cartlist.some((item) => item.id === id);
   const isInFavorites = (id: number) =>
@@ -26,6 +32,15 @@ const Menu: React.FC = () => {
     <Layout>
       <section className="py-8">
         <div className="container mx-auto px-4">
+          <div className="mb-8 text-center">
+            <input
+              type="text"
+              placeholder="ابحث عن منتج..."
+              className="w-full max-w-md p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8dc88c]"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </div>
           <h2 className="text-4xl font-bold mb-8 text-center">قائمتنا</h2>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -34,7 +49,7 @@ const Menu: React.FC = () => {
             transition={{ duration: 0.5 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
           >
-            {allProducts.map((dish) => (
+            {filteredProducts.map((dish) => (
               <div key={dish.id} className="bg-white rounded-lg p-4 shadow-lg">
                 <img
                   src={dish.img}

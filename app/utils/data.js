@@ -191,3 +191,5 @@ export const Desserts = [
     img: "/images/desert2.jpg",
   },
 ];
+
+export const AllProducts = DISHES.concat(Additions, Drinks, Desserts);
