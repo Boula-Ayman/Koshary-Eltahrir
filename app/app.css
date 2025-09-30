@@ -8,11 +8,67 @@
 
 html,
 body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   @apply bg-white dark:bg-gray-950;
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1025px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* Improved text rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Better focus styles for accessibility */
+*:focus {
+  outline: 2px solid #8dc88c;
+  outline-offset: 2px;
+}
+
+/* Gradients and shadows for better design */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+}
+
+.btn-enhanced {
+  @apply bg-gradient-to-br from-green-400 to-green-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl;
+}
+
+.card-enhanced {
+  @apply bg-white rounded-lg shadow-lg p-6 transition-shadow hover:shadow-2xl;
+}
+
+.container-enhanced {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.spacing-enhanced {
+  @apply space-y-6;
 }
 
 color {

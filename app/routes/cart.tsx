@@ -18,7 +18,9 @@ const Cart: React.FC = () => {
         >
           <ArrowLeft size={24} />
         </Link>
-        <h1 className="text-3xl font-bold mb-8">السلة</h1>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8">
+          السلة
+        </h1>
 
         <div className="mb-8">
           {cartlist.length === 0 ? (

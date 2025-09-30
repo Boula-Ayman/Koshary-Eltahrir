@@ -48,11 +48,13 @@ const Button: React.FC<ButtonProps> = ({
       <button
         onClick={handleClick}
         className={`${
-          isClicked ? "bg-[#8dc88c]" : "bg-white"
+          isClicked
+            ? "bg-gradient-to-br from-green-400 to-green-600 text-white"
+            : "bg-white text-gray-600"
         } border-2 border-[#8dc88c]
-          hover:bg-[#8dc88c] text-gray-600 font-semibold
-          py-3 px-18 rounded-2xl shadow-md transition duration-300
-          ease-in-out transform hover:scale-105 capitalize`}
+          hover:bg-gradient-to-br hover:from-green-400 hover:to-green-600 hover:text-white font-semibold
+          py-3 px-6 rounded-2xl shadow-lg transition-all duration-300
+          ease-in-out transform hover:scale-105 hover:shadow-xl capitalize`}
       >
         {children}
       </button>

@@ -5,7 +5,7 @@ const Contact = () => {
     <Layout>
       <section className="max-w-6xl mx-auto px-4 py-12">
         {/* Title */}
-        <h2 className="text-3xl font-bold text-center text-[#8dc88c] mb-8">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-[#8dc88c] mb-8">
           تواصل معنا
         </h2>
 

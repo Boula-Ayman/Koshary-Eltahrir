@@ -67,10 +67,12 @@ const Hero: React.FC<HeroProps> = ({
   //   favorites.some((item) => item.id === id);
 
   return (
-    <section className="relative bg-center h-[80vh] flex flex-col justify-center py-8">
-      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+    <section className="relative bg-center h-[80vh] flex flex-col justify-center py-8 ">
+      <div className="absolute inset-0 bg-black bg-opacity-60 "></div>
       <div className="relative z-10 text-center text-white px-4">
-        <h2 className="text-4xl font-bold pb-8 text-start">{title}</h2>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold pb-8 mt-10 text-start">
+          {title}
+        </h2>
         <div className="relative overflow-hidden w-full">
           <div
             className="flex transition-transform duration-500 ease-in-out"
@@ -84,14 +86,14 @@ const Hero: React.FC<HeroProps> = ({
                 className="flex-shrink-0 px-2"
                 style={{ width: `${100 / cardsPerView}%` }}
               >
-                <div className="bg-white bg-opacity-90 rounded-lg p-4 text-gray-900 shadow-lg h-full relative">
+                <div className="bg-white bg-opacity-95 rounded-xl p-6 text-gray-900 shadow-xl h-full relative transition-all duration-300 hover:shadow-2xl hover:scale-105">
                   <img
                     src={dish.img}
                     alt={dish.name}
                     className="w-full h-80 object-cover rounded-md mb-4"
                     loading="lazy"
                   />
-                  <h3 className="text-lg font-semibold mb-2 text-gray-800 ">
+                  <h3 className="text-lg font-semibold mb-2 mt-2 text-gray-800 ">
                     {dish.name}
                   </h3>
                   <p className="text-sm mb-4">{dish.desc}</p>
@@ -107,7 +109,9 @@ const Hero: React.FC<HeroProps> = ({
                         }
                       }}
                     >
-                      {dish.price}
+                      {dish.price
+                        .toString()
+                        .replace(/\d/g, (d) => "٠١٢٣٤٥٦٧٨٩"[d])}
                     </Button>
                     {/* <div className="flex space-x-2">
                       <button
