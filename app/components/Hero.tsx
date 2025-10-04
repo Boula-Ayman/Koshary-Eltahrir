@@ -70,7 +70,7 @@ const Hero: React.FC<HeroProps> = ({
     <section className="relative bg-center h-[80vh] flex flex-col justify-center py-8 ">
       <div className="absolute inset-0 bg-black bg-opacity-60 "></div>
       <div className="relative z-10 text-center text-white px-4">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold pb-8 mt-10 text-start">
+        <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-3xl font-bold pb-8 mt-10 text-start">
           {title}
         </h2>
         <div className="relative overflow-hidden w-full">
